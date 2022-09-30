@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+            
+            // TODO: Add code to check answers to questions
+            
+            // Load document object model for part 1
+            document.addEventListener("DOMContentLoaded", function() {
+                
+                // Incorrect answer
+                let wrong = document.querySelectorAll(".P1Incorrect");
+                [].forEach.call(wrong, function(item) {
+                    item.addEventListener("click", function() {
+                        
+                        // Let the text field turn "red"
+                        item.style.backgroundColor = "red";
+
+                        // Prompting text "Incorrect" beneath the question
+                        document.getElementById("P1Answer").innerHTML = "Incorrect";
+                    });
+                });
+                
+                
+                // Method 2: For loop iteration
+                /*let wrong = document.querySelectorAll(".P1Incorrect");
+                    for (let i = 0; i < wrong.length; i++) {
+                    wrong[i].addEventListener("click", function() {
+                        
+                        // Let the text field turn "red"
+                        wrong[i].style.backgroundColor = "red";*/
+                
+                
+                // Correct answer
+                let right = document.querySelector(".P1Correct");
+                right.addEventListener("click", function() {
+                    
+                    // Let the text field turn "green"
+                    right.style.backgroundColor = "green";
+                    
+                    // Prompting text "Correct!" beneath the question
+                    document.getElementById("P1Answer").innerHTML = "Correct!";
+                });
+            });
+            
+            
+            
+            // Load document object model for part 2
+            document.addEventListener("DOMContentLoaded", function() {
+                
+                let check = document.getElementById("P2Check");
+                let text = document.getElementById("P2ResponseText");
+                
+                check.addEventListener("click", function() {
+                    
+                    // Incorrect answer
+                    if (text.value !== "Switzerland")
+                    {
+                        // Let the text field turn "red"
+                        text.style.backgroundColor = "red";
+                        
+                        // Prompting text "Correct!" beneath the question
+                        document.getElementById("P2Answer").innerHTML = "Incorrect";
+                    }
+                    
+                    
+                    // Incorrect answer
+                    else
+                    {
+                        // Let the text field turn "green"
+                        text.style.backgroundColor = "green";
+                        
+                        // Prompting text "Correct!" beneath the question
+                        document.getElementById("P2Answer").innerHTML = "Correct!";
+                    }
+                });
+            });
+            
+            
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the approximate ratio fo people to sheep in New Zealand?</h3>
+                <button class="P1Incorrect">6 people per 1 sheep</button>
+                <button class="P1Incorrect">3 people per 1 sheep</button>
+                <button class="P1Incorrect">1 people per 1 sheep</button>
+                <button class="P1Incorrect">1 people per 3 sheep</button>
+                <button class="P1Correct">1 people per 6 sheep</button>
+                <p id="P1Answer"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <input id="P2ResponseText" type="text">
+                <button id="P2Check">Check Answer</button>
+                <p id="P2Answer"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>

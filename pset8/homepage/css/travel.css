@@ -1,0 +1,124 @@
+.content{
+    height: calc(100vh - 5rem);
+    overflow: scroll;
+}
+
+.content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+    #country{
+        background-color: #000;
+    }
+
+    .carousel-indicators{
+        z-index: 1;
+    }
+
+    .carousel-caption{
+        bottom: 3vh;
+        z-index: 0;
+    }
+
+        .carousel-caption p{
+            margin: 0;
+            cursor: default;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            background: rgba(3, 16, 41, 80%);
+        }
+        
+        .carousel-caption .text{
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+
+        .carousel-caption .ref{
+            font-style: italic;
+            font-weight: 400;
+            font-size: 0.8rem;
+        }
+
+            .carousel-caption .ref a{
+                color: yellow;
+            }
+
+        .carousel-control-next, .carousel-control-prev{
+            padding: 0;
+            border: 0;
+        }
+
+        /* Latter status will overwrite former status */
+        .carousel-control-next:focus, .carousel-control-prev:focus{
+            opacity: 0.5;
+        }
+
+        .carousel-control-next:hover, .carousel-control-prev:hover{
+            opacity: 0.9;
+        }
+
+        .carousel-control-next:active, .carousel-control-prev:active{
+            opacity: 1;
+        }
+
+        .carousel-control-next-icon, .carousel-control-prev-icon{
+            width: 8vw;
+            height: 8vw;
+        }
+
+/* Image fixed to browser height and vertical aligned*/
+.carousel .trigger, .carousel-item-left, .carousel-item-right{
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 5rem);
+}
+
+
+@media screen and (max-width: 767px){
+
+    .carousel-caption p{
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption .ref{
+        font-size: 0.8rem;
+    }
+
+}
+
+/* Spacing for menu bar on mobile devices*/
+@media screen and (max-width: 767px) and (min-height: 568px){
+
+    .carousel-indicators{
+        bottom: 15vh;
+    }
+    
+    .carousel-caption{
+        bottom: 18vh;
+    }
+    
+    img, .carousel-control-next-icon, .carousel-control-prev-icon{
+        position: relative;
+        top: -15vh;
+    }
+
+}
+
+@media screen and (min-width: 1281px){
+
+    .carousel-caption p{
+        font-size: 3.125vw;
+    }
+
+    .carousel-caption .text{
+        font-size: 1.5vw;
+    }
+
+    .carousel-caption .ref{
+        font-size: 1vw;
+    }
+
+}

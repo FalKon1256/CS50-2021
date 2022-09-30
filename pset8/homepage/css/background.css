@@ -1,0 +1,21 @@
+.background{
+    position: absolute;
+}
+
+    .background .background_1{
+        width: 100vw;
+        height: calc(100vh - 5rem);
+        background: linear-gradient(45deg, #AE0EE5 0%, #1F32CB 45%, #7A03FE 100%);
+        transition: 1s;
+    }
+    
+    .background .background_2{
+        position: absolute;
+        left: 40vw;
+        top: calc(15vh - 5rem);
+        opacity: 0.15;
+    }
+
+    .background .background_2 path{
+        transform: rotate(25deg);
+    }

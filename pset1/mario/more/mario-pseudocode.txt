@@ -1,0 +1,9 @@
+Prompt user for positive integer input in range for pyramid height
+If input value is out of range
+    go back to line 1
+Else
+    go to line 7
+    
+Start printing out right-side pyramid corresponded to input height
+    Each row will first print out spaces, then # shaped bricks
+    Finish print out

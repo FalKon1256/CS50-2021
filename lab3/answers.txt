@@ -1,0 +1,157 @@
+sort1 uses: Bubble sort
+
+How do you know?:
+In high count sample scenario, when we run program sort1, it performs explicitly different between sorted and reversed data (6 and 14 sec respectively).
+Test results matches the feature of "Bubble sort".
+
+
+sort2 uses: Merge sort
+
+How do you know?:
+In high count sample scenario, when we run program sort2, it performs the best in reversed data than others (sort1, 2, and 3 performs 14, 4, and 10 sec respectively).
+Furthermore, it performs similar between sorted and reversed data (6 and 4 sec respectively).
+Test results matches the two features of "Merge sort".
+
+
+sort3 uses: Selection sort
+
+How do you know?:
+In high count sample scenario, when we run program sort3, it doesn't perform good as sort2 in reversed data (4 and 10 sec respectively).
+Furthermore, it performs similar between sorted and reversed data (12 and 15 sec respectively).
+Test results matches the feature of "Selection sort".
+
+
+
+MEMO:
+
+sort1:
+
+    random
+        //random 5000
+            real    0m0.059s
+            user    0m0.047s
+            sys     0m0.012s
+        //random 10000
+            real    0m0.496s
+            user    0m0.228s
+            sys     0m0.020s
+        //random 50000
+            real    0m17.443s   *
+            user    0m6.575s
+            sys     0m0.100s
+
+    sorted    
+        //sorted 5000
+            real    0m0.013s
+            user    0m0.004s
+            sys     0m0.009s
+        //sorted 10000
+            real    0m0.477s
+            user    0m0.009s
+            sys     0m0.013s
+        //sorted 50000
+            real    0m6.355s    *
+            user    0m0.029s
+            sys     0m0.101s
+
+    reversed
+        //reversed 5000
+            real    0m0.092s
+            user    0m0.049s
+            sys     0m0.012s
+        //reversed 10000
+            real    0m0.412s
+            user    0m0.192s
+            sys     0m0.016s
+        //reversed 50000
+            real    0m14.319s   *
+            user    0m4.791s
+            sys     0m0.132s
+
+sort2:
+
+    random
+        //random 5000
+            real    0m0.012s
+            user    0m0.008s
+            sys     0m0.004s
+        //random 10000
+            real    0m0.033s
+            user    0m0.000s
+            sys     0m0.034s
+        //random 50000
+            real    0m9.195s    *
+            user    0m0.042s
+            sys     0m0.098s
+
+    sorted    
+        //sorted 5000
+            real    0m0.015s
+            user    0m0.007s
+            sys     0m0.007s
+        //sorted 10000
+            real    0m0.021s
+            user    0m0.010s
+            sys     0m0.011s
+        //sorted 50000
+            real    0m6.014s    *
+            user    0m0.032s
+            sys     0m0.084s
+
+    reversed
+        //reversed 5000
+            real    0m0.015s
+            user    0m0.004s
+            sys     0m0.011s
+        //reversed 10000
+            real    0m0.019s
+            user    0m0.005s
+            sys     0m0.014s
+        //reversed 50000
+            real    0m4.292s    *
+            user    0m0.028s
+            sys     0m0.083s
+
+sort3:
+
+    random
+        //random 5000
+            real    0m0.049s
+            user    0m0.026s
+            sys     0m0.011s
+        //random 10000
+            real    0m0.325s
+            user    0m0.126s
+            sys     0m0.024s
+        //random 50000
+            real    0m12.897s   *
+            user    0m2.891s
+            sys     0m0.085s
+
+    sorted    
+        //sorted 5000
+            real    0m0.049s
+            user    0m0.028s
+            sys     0m0.012s
+        //sorted 10000
+            real    0m0.308s
+            user    0m0.129s
+            sys     0m0.020s
+        //sorted 50000
+            real    0m12.655s   *
+            user    0m2.889s
+            sys     0m0.108s
+
+    reversed
+        //reversed 5000
+            real    0m0.044s
+            user    0m0.027s
+            sys     0m0.009s
+        //reversed 10000
+            real    0m0.340s
+            user    0m0.138s
+            sys     0m0.020s
+        //reversed 50000
+            real    0m15.052s   *
+            user    0m2.721s
+            sys     0m0.128s

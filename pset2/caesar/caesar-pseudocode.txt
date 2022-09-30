@@ -1,0 +1,14 @@
+Input single command-line argument
+If input is a negative integer or contains any non-digit character
+    Prompt user with an error message, and go back to step 1
+Else
+    Go to line 6
+Convert command-line argument from "string" to "int" data form
+Prompt user to input plaintext
+Check the characters of the plaintext
+    If character is uppercase letter
+        Rotate it and preserve uppercase, then print the rotated character
+    Else if character is lowercase letter
+        Rotate it and preserve lowercase, then print the rotated character
+    Else
+        Print the original character as is

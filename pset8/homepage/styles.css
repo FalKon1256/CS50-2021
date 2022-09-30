@@ -1,0 +1,243 @@
+.content{
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: calc(100vh - 5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5.5vh;
+    line-height: 6.5vh;
+    color: #ccffff;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: 700;
+    overflow-x: auto;
+    overflow-y: scroll;
+    
+    /*Scroll bar spacing and styling*/
+    padding-left: 0.2rem;
+    -webkit-mask-image: linear-gradient(to top, transparent 100vh,
+                        black calc(20000px - 100vh)),
+                        linear-gradient(to left, transparent 0.2rem, black 0.2rem);
+    -webkit-mask-size: 100% 20000px;
+    -webkit-mask-position: left bottom;
+    transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+    
+    /* Apply padding and fade-in when visiting website (Method 1)*/
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -webkit-animation-name: fadein;
+    -moz-animation-name: fadein;
+
+    /* Change padding when visiting website (Method 2)
+    transition: padding 1s;*/
+}
+
+    @-webkit-keyframes fadein {
+        from {
+            color: #000;
+            padding: 0;
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes fadein {
+        from {
+            padding: 0;
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+.content:hover {
+  -webkit-mask-position: left top;
+}
+
+.content::-webkit-scrollbar {
+    width: 0.2rem;
+    height: 0.2rem;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #303030;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #707070;
+    border-radius: 3.2rem;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background-color: #bcbcbc;
+}
+
+    #background_control{
+        display: none;
+    }
+
+    #background_control:checked ~ .background .background_1{
+        background: linear-gradient(135deg, #D35B38 0%, #185A6A 50%, #956F29 100%);
+        opacity: 0.9;
+    }
+
+    #background_control:checked ~ .content .bi{
+        transform: rotate(360deg);
+        color: #000;
+    }
+
+    .content p, .icon{
+        vertical-align: middle;
+        text-align: center;
+        margin: 0;
+        padding: 2vh;
+        cursor: default;
+    }
+
+        .content .greet_1, .greet_2{
+            font-size: 2.5rem;
+        }
+
+            .content span{
+                color: #ffcfd6;
+
+                /* Animation only affects first child layer*/
+                -webkit-animation-duration: 1s;
+                -moz-animation-duration: 1s;
+                -webkit-animation-name: fadein;
+                -moz-animation-name: fadein;
+            }
+
+        .content .icon{
+            margin: 0;
+
+            /* Cover former padding*/
+            padding-top: 3vh;
+        }
+
+            .content .bi{
+                transition: .5s;
+                font-size: 5.8rem;
+                cursor: pointer;
+            }
+
+            .content .bi:hover{
+                font-size: 6.8rem;
+            }
+
+        .content .greet_3{
+            font-size: 1rem;
+            padding-top: 5vh;
+            
+            /* Spacing for menu bar on mobile devices*/
+            padding-bottom: 2vh;
+        }
+
+            .content .cs50{
+                color: #ffcfd6;
+                text-decoration: none;
+                transition: .5s;
+            }
+
+            .content .cs50:hover{
+                color: yellow;
+                font-size: 1.2rem;
+            }
+
+        .content .greet_4{
+            font-size: 1.4rem;
+        }
+
+@media screen and (min-width: 768px){
+
+    .content .greet_1, .greet_2{
+        font-size: 3.2rem;
+    }
+
+    .content .bi{
+        font-size: 6.5rem;
+    }
+
+    .content .bi:hover{
+        font-size: 7.5rem;
+    }
+
+    .content .greet_3{
+        font-size: 1.7rem;
+        padding-bottom: 5vh;
+    }
+    
+        .content .cs50:hover{
+            font-size: 1.9rem;
+        }
+
+    .content .greet_4{
+        font-size: 2.2rem;
+    }
+
+}
+
+@media screen and (min-width: 1281px){
+
+    .content .greet_1, .greet_2{
+        font-size: 4vw;
+    }
+
+    .content .bi{
+        font-size: 8.08vw;
+    }
+
+    .content .bi:hover{
+        font-size: 9.4vw;
+    }
+
+    .content .greet_3{
+        font-size: 2.13vw;
+    }
+
+        .content .cs50:hover{
+            font-size: 2.4vw;
+        }
+
+    .content .greet_4{
+        font-size: 2.75vw;
+    }
+
+}
+
+@media screen and (max-height: 635px){
+
+.content{
+    padding-top: 2.18rem;
+    line-height: 2.58rem;
+}
+
+    .content p, .icon{
+        padding: 0.79rem;
+    }
+
+    .content .icon{
+        padding-top: 1.19rem;
+    }
+
+    .content .greet_3{
+        padding-top: 1.98rem;
+        padding-bottom: 1.98rem;
+    }
+
+}
+
+/* Spacing for menu bar on mobile devices*/
+@media screen and (max-height: 635px) and (max-width: 767px){
+    
+    .content .greet_3{
+        padding-bottom: 0.79rem;
+    }
+    
+}

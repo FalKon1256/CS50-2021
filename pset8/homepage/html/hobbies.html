@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0", shrink-to-fit=no>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+        <link href="../css/menubar.css" rel="stylesheet">
+        <link href="../css/background.css" rel="stylesheet">
+        <link href="../css/hobbies.css" rel="stylesheet">
+
+        <title>My Webpage - Hobbies</title>
+
+    </head>
+    <body>
+
+        <input type="checkbox" name="" id="menu_control">
+
+        <div class="header">
+        
+            <a href="../index.html" class="home">
+                <div class="bi bi-house-door-fill"></div>
+                <div class="text">Home</div>
+            </a>
+
+            <label for="menu_control" class="menu_btn">
+                <div class="bi bi-menu-button-wide-fill"></div>
+            </label>
+
+            <nav class="menu">
+
+                <a href="intro.html" class="intro">
+                    <div class="bi bi-person-circle"></div>
+                    <div class="text">Intro</div>
+                </a>
+
+                <a href="hobbies.html" class="hobbies">
+                    <div class="bi bi-star-fill"></div>
+                    <div class="text">Hobbies</div>
+                </a>
+
+                <a href="sports.html" class="sports">
+                    <div class="bi bi-bicycle"></div>
+                    <div class="text">Sports</div>
+                </a>
+
+                <a href="travel.html" class="travel">
+                    <div class="bi bi-globe"></div>
+                    <div class="text">Travel</div>
+                </a>
+
+                <label class="menu_bottom">
+                    <div class="bi bi-mask"></div>
+                    <div class="menu_text">Menu</div>
+                </label>
+
+            </nav>
+        </div>
+
+
+        <div class="background">
+
+            <div class="background_1"></div>
+
+            <div class="background_2">
+
+                <svg fill="#fff" width="60vw" height="85vh" class="bi bi-circle-square"
+                viewBox="-5 0 16 16" preserveAspectRatio="xMinYMin slice">
+                    <path d="M0 6a6 6 0 1 1 12 0A6 6 0 0 1 0 6z"/>
+                    <path d="M12.93 5h1.57a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-9a.5.5
+                            0 0 1-.5-.5v-1.57a6.953 6.953 0 0 1-1-.22v1.79A1.5 1.5 0
+                            0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5
+                            4h-1.79c.097.324.17.658.22 1z"/>
+                </svg>
+
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2">
+                    
+                    <div id="drama" class="category col">
+                        <div id="drama-content" class="category-content">
+                            
+                            <label id="drama-content-title">
+                                Favorite dramas:
+                            </label>
+                            
+                            <div id="drama-item-1" class="drama-item">
+                                
+                                <!-- Button trigger modal -->
+                                <label class="drama-name" data-toggle="modal" data-target="#drama-text-1-1">
+                                    1. Breaking Bad (TV Series 2008 - 2013):
+                                </label>
+                                <p class="drama-text">5 seasons (62 episodes), favorite season: S4 and S5.</p>
+                            </div>
+                            
+                            <div id="drama-item-2" class="drama-item">
+                                <!-- Button trigger modal -->
+                                <label class="drama-name" data-toggle="modal" data-target="#drama-text-2">
+                                    2. Game of Thrones (TV Series 2011 – 2019):
+                                </label>
+                                <p class="drama-text">8 seasons (73 episodes), favorite season: S1 and S3.</p>
+                            </div>
+                            
+                            <div id="drama-item-3" class="drama-item">
+                                <!-- Button trigger modal -->
+                                <label class="drama-name" data-toggle="modal" data-target="#drama-text-3">
+                                    3. Squid Game (TV Series 2021 – present):
+                                </label>
+                                <p class="drama-text">1 seasons (9 episodes), favorite season: S1.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="song" class="category col">
+                        <div id="song-content" class="category-content">
+                            
+                            <label id="song-content-title">
+                                Favorite songs:
+                            </label>
+                            
+                            <div id="song-item-1" class="song-item">
+                                
+                                <label class="song-name">
+                                    1. Backstreet Boys:
+                                </label>
+                                <p class="song-text">
+                                    <a href="https://www.youtube.com/watch?v=4fndeDfaWCg" target="_blank">
+                                    I Want It That Way (1999)</a>
+                                </p>
+                                
+                            </div>
+                            
+                            <div id="song-item-2" class="song-item">
+                                
+                                <label class="song-name" data-toggle="modal" data-target="#song-text-2">
+                                    2. Billy Boyd:
+                                </label>
+                                <p class="song-text">
+                                    <a href="https://www.youtube.com/watch?v=q8ir8rVl2Z4" target="_blank">
+                                    The Last Goodbye (2014)</a>
+                                </p>
+                                
+                            </div>
+                            
+                            <div id="song-item-3" class="song-item">
+                                
+                                <label class="song-name" data-toggle="modal" data-target="#song-text-3">
+                                    3. Rick Astley
+                                </label>
+                                <p class="song-text">
+                                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                                    Never Gonna Give You Up (1987)</a>
+                                </p>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="movie" class="category col">
+                        <div id="movie-content" class="category-content">
+                            
+                            <label id="movie-content-title">
+                                Favorite movies:
+                            </label>
+                            
+                            <div id="movie-item-1" class="movie-item">
+                                
+                                <!-- Button trigger modal -->
+                                <label class="movie-name" data-toggle="modal" data-target="#movie-text-1">
+                                    1. The Matrix series (1999 – present):
+                                </label>
+                                <p class="movie-text">
+                                    The Matrix (1999)<br>
+                                    The Matrix: Reloaded (2003)<br>
+                                    The Matrix: Revolutions (2003)<br>
+                                    The Matrix: Resurrections (2021)<br>
+                                </p>
+                            </div>
+                            
+                            <div id="movie-item-2" class="movie-item">
+                                
+                                <!-- Button trigger modal -->
+                                <label class="movie-name" data-toggle="modal" data-target="#movie-text-2">
+                                    2. The Lord of the Rings series (2001 - 2014):
+                                </label>
+                                <p class="movie-text">
+                                    The Lord of the Rings: The Fellowship of the Ring (2001)<br>
+                                    The Lord of the Rings: The Two Towers (2002)<br>
+                                    The Lord of the Rings: The Return of the King (2003)<br>
+                                    <br>
+                                    &lt; Prequel &gt;<br>
+                                    The Hobbit: An Unexpected Journey (2012)<br>
+                                    The Hobbit: The Desolation of Smaug (2014)<br>
+                                    The Hobbit: The Battle of the Five Armies (2014)<br>
+                                </p>
+                            </div>
+                            
+                            <div id="movie-item-3" class="movie-item">
+                                
+                                <!-- Button trigger modal -->
+                                <label class="movie-name" data-toggle="modal" data-target="#movie-text-3">
+                                    3. The Dark Knight Trilogy (2001 - 2012):
+                                </label>
+                                <p class="movie-text">
+                                    Batman Begins (2001)<br>
+                                    The Dark Knight (2008)<br>
+                                    The Dark Knight Rises (2012)<br>
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="book" class="category col">
+                        <div id="book-content" class="category-content">
+                            
+                            <label id="book-content-title">
+                                Favorite books:
+                            </label>
+                            
+                            <div id="book-item-1" class="book-item">
+                                
+                                <label class="book-name">
+                                    1. <span>The Dark Tower</span> series &mdash; Stephen King:
+                                </label>
+                                <p class="book-text">
+                                    <span>The Dark Tower I: The Gunslinger</span> (1982)<br>
+                                    <span>The Dark Tower II: The Drawing of the Three</span> (1987)<br>
+                                    <span>The Dark Tower III: The Waste Lands</span> (1991)<br>
+                                    <span>The Dark Tower IV: Wizard and Glass</span> (1997)<br>
+                                    <span>The Dark Tower V: Wolves of the Calla</span> (2003)<br>
+                                    <span>The Dark Tower VI: Song of Susannah</span> (2004)<br>
+                                    <span>The Dark Tower VII: The Dark Tower</span> (2004)<br>
+                                    <br>
+                                    &lt; Extra Chapter &gt;<br>
+                                    <span>The Dark Tower: The Wind Through the Keyhole</span> (2012)
+                                </p>
+                                
+                            </div>
+                            
+                            <div id="book-item-2" class="book-item">
+                                
+                                <label class="book-name">
+                                    2. <span>The Lord of the Rings</span> series &mdash; J. R. R. Tolkien:
+                                </label>
+                                <p class="book-text">
+                                    <span>The Fellowship of the Ring</span> (1954)<br>
+                                    <span>The Two Towers</span> (1954)<br>
+                                    <span>The Return of the King</span> (1955)<br>
+                                    <br>
+                                    &lt; Prequel &gt;<br>
+                                    <span>The Hobbit</span> (1937)<br>
+                                </p>
+                                
+                            </div>
+                            
+                            <div id="book-item-3" class="book-item">
+                                
+                                <label class="book-name">
+                                    3. <span>The knight in rusty armor</span> (1989) &mdash; Robert Fisher
+                                </label>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Modal for drama -->
+        <div class="modal fade" id="drama-text-1-1" tabindex="-1" aria-labelledby="drama-text-1-1-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+        
+                    <div class="modal-header">
+                        
+                        <p class="modal-title" id="drama-text-1-1-title">Mr. White</p>
+                        
+                    </div>
+                    
+                    <div class="modal-body">“Now, say my name.”</div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#drama-text-1-2" data-dismiss="modal">Heisenberg</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="drama-text-1-2" tabindex="-1" aria-labelledby="drama-text-1-2-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+        
+                    <div class="modal-header">
+                        
+                        <p class="modal-title" id="drama-text-1-2-title">Mr. White</p>
+                        
+                    </div>
+                    
+                    <div class="modal-body">“You're goddamn right.”</div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="modal fade" id="drama-text-2" tabindex="-1" aria-labelledby="drama-text-2-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+        
+                    <div class="modal-header">
+                        
+                        <p class="modal-title" id="drama-text-2-title">Littlefinger</p>
+                        
+                    </div>
+                    
+                    <div class="modal-body">
+                        “Chaos isn't a pit.<br>
+                        Chaos is a ladder.”
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="drama-text-3" tabindex="-1" aria-labelledby="drama-text-3-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+        
+                    <div class="modal-header">
+                        
+                        <p class="modal-title" id="drama-text-3-title">Squid Game</p>
+                        
+                    </div>
+                    
+                    <div class="modal-body">
+                        “One, two, three,<br>
+                        wooden people!”
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal for movie -->
+        <div class="modal fade" id="movie-text-1" tabindex="-1" aria-labelledby="movie-text-1-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+        
+                    <div class="modal-header">
+                        
+                        <p class="modal-title" id="movie-text-1-title">Neo</p>
+                        
+                    </div>
+                    
+                    <div class="modal-body">“Because I choose to.”</div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="movie-text-2" tabindex="-1" aria-labelledby="movie-text-2-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+        
+                    <div class="modal-header">
+                        
+                        <p class="modal-title" id="movie-text-2-title">Aragorn</p>
+                        
+                    </div>
+                    
+                    <div class="modal-body">
+                        “My friends,<br>
+                        you bow to no one.”
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="movie-text-3" tabindex="-1" aria-labelledby="movie-text-3-title" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+        
+                    <div class="modal-header">
+                        
+                        <p class="modal-title" id="movie-text-3-title">The Joker</p>
+                        
+                    </div>
+                    
+                    <div class="modal-body">“Why So Serious?”</div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

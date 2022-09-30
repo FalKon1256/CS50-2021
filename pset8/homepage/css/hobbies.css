@@ -1,0 +1,298 @@
+.content{
+    overflow-x: auto;
+    overflow-y: scroll;
+
+    /*Scroll bar spacing and styling*/
+    padding-left: 0.2rem;
+    -webkit-mask-image: linear-gradient(to top, transparent 100vh,
+                        black calc(20000px - 100vh)),
+                        linear-gradient(to left, transparent 0.2rem, black 0.2rem);
+    -webkit-mask-size: 100% 20000px;
+    -webkit-mask-position: left bottom;
+    transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+}
+
+.content:hover {
+  -webkit-mask-position: left top;
+}
+
+.content::-webkit-scrollbar {
+    width: 0.2rem;
+    height: 0.2rem;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #303030;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #707070;
+    border-radius: 3.2rem;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background-color: #bcbcbc;
+}
+
+
+.container{
+    height: calc(100vh - 5rem);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10vh;
+}
+
+    .row{
+        position: absolute;
+        width: 90vw;
+        color: #ccffff;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10vh;
+    }
+
+        .category{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 1.5vw;
+        }
+
+            .category-content{
+                display: inline-block;
+                border-radius: 1.5rem;
+                padding: 1rem;
+                background: rgba(0, 0, 0, 45%);
+            }
+
+                #drama-content-title{
+                    color: #ffcfd6;
+                }
+
+                #song-content-title{
+                    color: #B9F5FF;
+                }
+
+                #movie-content-title{
+                    color: #C1FFB9;
+                }
+
+                #book-content-title{
+                    color: #FFEDB8;
+                }
+
+                .drama-name{
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                    color: #FF798D;
+                }
+
+                .song-name{
+                    font-size: 1.2rem;
+                    color: #7DECFF;
+                }
+
+                .movie-name{
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                    color: #97FF89;
+                }
+
+                .book-name{
+                    font-size: 1.2rem;
+                    color: #FFE188;
+                }
+
+                    .book-name span{
+                        font-style: italic;
+                        text-decoration: underline;
+                    }
+
+                .drama-name:hover, .movie-name:hover{
+                    text-decoration: underline;
+                    color: yellow;
+                }
+
+                .drama-text, .song-text, .movie-text, .book-text{
+                    font-size: 1rem;
+                    padding-left: 1.5rem;
+                }
+
+                .song-text a{
+                    text-decoration: underline;
+                    color: #ccffff;
+                }
+
+                .song-text a:hover{
+                    color: yellow;
+                }
+
+                    .book-text span{
+                        font-style: italic;
+                    }
+
+.modal.show{
+    overflow: scroll;
+}
+
+.modal.show::-webkit-scrollbar {
+    width: 0rem;
+    height: 0rem;
+}
+
+.modal-content{
+    color: #ccffff;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: #181a1b;
+}
+
+.modal-title{
+    font-size: 1.5rem;
+}
+
+.modal-body{
+    text-align: center;
+}
+
+.modal .btn{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: 700;
+}
+
+
+@media screen and (max-width: 575px){
+    
+    .modal-dialog {
+        max-width: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .modal-content{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .container{
+        top: 5vh;
+    }
+
+    .row{
+        font-size: 5.33vw;
+        padding-bottom: 15vh;
+    }
+
+    .category-content{
+        padding: 2.66vw;
+    }
+
+    .drama-name, .song-name, .movie-name, .book-name{
+        font-size: 3.2vw;
+    }
+
+    .drama-text, .song-text, .movie-text, .book-text{
+        font-size: 2.66vw;
+        padding-left: 4vw;
+    }
+    
+    
+    .modal-content{
+        font-size: 5.33vw;
+    }
+    
+    .modal-title{
+        font-size: 4vw;
+    }
+    
+    .modal .btn{
+        font-size: 2.66vw;
+    }
+
+}
+
+@media screen and (min-width: 1281px){
+
+    .row{
+        font-size: 2.5vw;
+    }
+
+    .category-content{
+        padding: 1.25vw;
+        border-radius: 1.88vw;
+    }
+
+    .drama-name, .song-name, .movie-name, .book-name{
+        font-size: 1.5vw;
+    }
+
+    .drama-text, .song-text, .movie-text, .book-text{
+        font-size: 1.25vw;
+        padding-left: 1.88vw;
+    }
+    
+    .modal-dialog {
+        max-width: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .modal-content{
+        width: 40vw;
+        font-size: 2.5vw;
+    }
+    
+    .modal-title{
+        font-size: 1.88vw;
+    }
+    
+    .modal .btn{
+        font-size: 1.25vw;
+        padding: 0.47vw;
+        border-radius: 0.32vw;
+        
+        /* ".modal-footer>*{}" means all children of ".modal-footer" */
+        margin: 0.32vw;
+    }
+
+}
+
+
+/* Prevent wraping text too serious */
+@media screen and (min-width: 768px) and (max-width: 975px){
+
+    .category{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 976px) and (max-width: 1170px){
+
+    .category-content{
+        padding: 1rem;
+    }
+
+}
+
+/* Adapt to low W/H ratio window */
+@media screen and (min-width: 976px) and (max-device-aspect-ratio: 976/1400){
+    
+    .container{
+        top: 0;
+        align-items: center;
+    }
+    
+    .row{
+        padding-bottom: 0;
+    }
+
+}
